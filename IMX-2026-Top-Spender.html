@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Kahf × IMX 2026 — Top Spender</title>
+  <style>
+    :root{--ink:#10281e;--deep:#0c1d16;--panel:#142c21;--line:#ffffff1c;--lime:#d4f576;--cream:#f4f3eb;--muted:#a6b6a9;--white:#fffef6;--danger:#a43a30;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--deep);color:var(--white);font-family:var(--sans);font-size:15px}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,a:focus-visible{outline:3px solid #75a8ff;outline-offset:4px}input:focus{outline:3px solid #acc74c;outline-offset:1px}[hidden]{display:none!important}h1,h2,h3,p{margin:0}button{border:0}button svg{width:18px;height:18px;flex:none}svg{display:block}a{color:inherit}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:25px 4vw;border-bottom:1px solid var(--line);gap:24px}.brand{display:flex;align-items:center;gap:23px}.wordmark{font-weight:700;font-size:41px;letter-spacing:-3px;line-height:1}.brand-divider{height:30px;width:1px;background:#ffffff3c}.event-mark{font-weight:800;font-size:20px;letter-spacing:-.6px}.event-mark span{display:block;font-size:10px;letter-spacing:3px;color:var(--muted);margin-top:4px}.status{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:1.8px;font-weight:700}.status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px #d4f57677}.tag{font-size:10px;letter-spacing:2px;font-weight:700;color:var(--muted)}
+    .admin-shell{max-width:1550px;margin:auto;padding:38px 4vw 36px}.admin-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--lime);margin-bottom:13px}.admin-heading h1{font-size:clamp(28px,3.3vw,43px);letter-spacing:-1.4px;line-height:1.1}.admin-heading p{color:var(--muted);margin-top:12px;line-height:1.5}.header-actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;gap:9px;align-items:center;justify-content:center;padding:13px 18px;border-radius:7px;font-weight:700;line-height:1.2;transition:background .15s,transform .15s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--lime);color:var(--ink)}.btn-primary:hover{background:#e1ff92}.btn-outline{border:1px solid #ffffff3b;color:var(--white);background:transparent}.btn-soft{background:#e4e7dc;color:var(--ink)}.btn-dark{background:var(--ink);color:var(--white)}.btn-danger{background:#f8e5e1;color:var(--danger)}.small-btn{font-size:12px;padding:9px 12px}.main-grid{display:grid;grid-template-columns:350px minmax(0,1fr);gap:24px;align-items:start}.operator-panel{background:var(--cream);color:var(--ink);border-radius:11px;overflow:hidden}.operator-header{padding:26px 25px 21px;border-bottom:1px solid #10281e1b}.operator-header h2{font-size:22px;letter-spacing:-.6px}.operator-header p{font-size:12px;line-height:1.6;color:#657162;margin-top:10px}.operator-header strong{color:var(--ink)}.entry-form{padding:23px 25px 25px}.field{margin-bottom:21px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:9px}.field input{display:block;background:white;border:1px solid #ccd1c5;border-radius:6px;color:var(--ink);width:100%;padding:14px 12px;line-height:1.3}.field small{display:block;font-size:11px;line-height:1.5;margin-top:8px;color:#697465}.amount-wrap{position:relative}.amount-wrap span{position:absolute;left:13px;top:15px;font-weight:700;color:#7b8478}.amount-wrap input{padding-left:42px;font-size:20px;font-weight:700}.form-error{color:var(--danger);font-size:12px;line-height:1.5;margin:0 0 14px}.entry-form .btn-dark{width:100%}.edit-banner{background:#e6edca;font-size:12px;line-height:1.5;padding:12px;border-radius:6px;margin-bottom:19px}.cancel-edit{width:100%;margin-top:8px}.panel-foot{padding:18px 25px;background:#e9ebe1;border-top:1px solid #10281e12;font-size:11px;line-height:1.6;color:#5c6957}.panel-foot strong{display:block;color:var(--ink);font-size:12px;margin-bottom:3px}.preview-section{min-width:0}.preview-caption{display:flex;justify-content:space-between;align-items:center;margin:0 0 12px;font-size:11px;color:var(--muted);gap:15px}.preview-caption strong{color:var(--white);font-size:12px}.preview-caption span{display:flex;gap:7px;align-items:center}.preview-caption span:before{content:"";width:6px;height:6px;background:var(--lime);border-radius:50%}
+    .board{position:relative;isolation:isolate;background:linear-gradient(135deg,#183c2b,#0c2118 75%);overflow:hidden;border:1px solid #ffffff1c;border-radius:11px;padding:30px;min-height:475px}.board:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(119deg,transparent 0,transparent 82px,#ffffff03 83px,#ffffff03 84px)}.board:after{content:"";position:absolute;width:270px;height:270px;right:-165px;top:10px;border:46px solid #d4f57609;border-radius:50%;pointer-events:none;z-index:-1}.board-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:26px}.board-kicker{font-size:9px;font-weight:700;letter-spacing:2.7px;color:var(--lime);margin-bottom:9px}.board h2{font-size:clamp(27px,3.3vw,46px);font-weight:800;letter-spacing:-1.8px;line-height:.97;text-transform:uppercase}.checkers{width:42px;height:28px;background:conic-gradient(var(--lime) 25%,transparent 0 50%,var(--lime) 0 75%,transparent 0);background-size:14px 14px;transform:skew(-10deg);opacity:.9;flex:none;margin-top:10px}.winner{position:relative;display:flex;align-items:center;gap:19px;border:1px solid #d4f5765a;background:#d4f5760e;padding:22px;border-radius:7px;margin-bottom:13px}.winner-rank{font-weight:800;color:var(--lime);font-size:57px;letter-spacing:-4px;line-height:1;width:65px;flex:none}.winner-name{font-size:clamp(24px,3.2vw,44px);font-weight:700;letter-spacing:-1.3px;line-height:1.12;overflow-wrap:anywhere}.winner-label{font-size:9px;letter-spacing:2.5px;font-weight:700;color:var(--lime);margin-bottom:9px}.winner-star{margin-left:auto;color:var(--lime);width:30px;height:30px;flex:none}.rank-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;list-style:none;padding:0;margin:0}.rank-row{display:flex;align-items:center;gap:15px;padding:15px;background:#ffffff06;border:1px solid #ffffff0e;border-radius:5px;min-width:0}.rank-number{font-weight:700;color:var(--muted);font-size:17px;width:24px;flex:none}.rank-name{font-weight:600;font-size:19px;line-height:1.25;overflow-wrap:anywhere}.board-footer{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);margin-top:23px;padding-top:13px;font-size:8px;letter-spacing:1.7px;color:var(--muted);font-weight:700}.board-empty{min-height:267px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px dashed #ffffff28;border-radius:7px;padding:30px}.board-empty svg{color:var(--lime);width:46px;height:46px;margin-bottom:22px}.board-empty h3{font-size:25px;letter-spacing:-.8px;line-height:1.2}.board-empty p{font-size:13px;line-height:1.6;color:var(--muted);max-width:290px;margin-top:12px}
+    .data-section{margin-top:30px;background:#13291e;border:1px solid var(--line);border-radius:10px;overflow:hidden}.data-header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:21px 25px;flex-wrap:wrap}.data-header h2{font-size:19px;letter-spacing:-.5px}.data-header p{font-size:11px;line-height:1.5;color:var(--muted);margin-top:6px}.data-actions{display:flex;gap:8px;flex-wrap:wrap}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;text-align:left}th{color:var(--muted);font-size:10px;letter-spacing:1.3px;text-transform:uppercase;font-weight:700;padding:13px 25px;background:#ffffff04}td{padding:15px 25px;border-top:1px solid var(--line);font-size:13px}.table-rank{color:var(--lime);font-weight:700;width:65px}.table-amount{font-weight:700;white-space:nowrap}.table-name{overflow-wrap:anywhere}.row-actions{display:flex;gap:7px}.row-actions button{background:transparent;border:1px solid #ffffff24;color:var(--white);border-radius:5px;font-size:11px;padding:7px 10px}.row-actions button:hover{background:#ffffff0e}.row-actions button[data-action="delete"]{color:#f4aaa0}.table-empty{text-align:center;color:var(--muted);padding:27px}.data-footer{padding:15px 25px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:11px;line-height:1.5;color:var(--muted)}.text-button{background:transparent;color:#e1a798;font-size:11px;text-decoration:underline;text-underline-offset:3px;padding:4px;white-space:nowrap}.storage-warning{background:#ffefd8;color:#633900;border:1px solid #ebc587;padding:14px 18px;border-radius:7px;line-height:1.6;margin-bottom:20px;font-size:13px}.page-note{font-size:11px;color:#708574;line-height:1.6;margin-top:22px;text-align:center}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);padding:13px 20px;border-radius:7px;background:var(--lime);color:var(--ink);font-size:13px;font-weight:700;box-shadow:0 8px 35px #0005;z-index:20;max-width:calc(100% - 30px);text-align:center}
+    dialog{border:1px solid #ccd3c6;border-radius:12px;background:var(--cream);color:var(--ink);padding:0;max-width:570px;width:calc(100% - 32px);box-shadow:0 30px 100px #0006}dialog::backdrop{background:#07170ecc;backdrop-filter:blur(5px)}.dialog-body{padding:29px}.dialog-body h2{font-size:25px;letter-spacing:-.7px;margin-bottom:15px}.dialog-body p{font-size:14px;line-height:1.7;color:#5b6856;white-space:pre-line}.dialog-actions{display:flex;justify-content:flex-end;gap:9px;padding:0 29px 26px}.help-list{padding-left:20px;color:#566451;font-size:13px;line-height:1.8;margin:15px 0 22px}.help-list li{padding:0 0 10px 4px}.help-list strong{color:var(--ink)}.help-note{background:#e4e9d6;padding:14px;border-radius:7px;margin:13px 0;font-size:12px!important;line-height:1.6!important}.help-keys{font-size:11px;color:#677261;margin-top:17px}kbd{border:1px solid #bdc7b1;border-radius:3px;padding:2px 5px;font-family:var(--sans);background:white}
+    body.display-mode{overflow:hidden}.display-shell{height:100vh;height:100dvh;padding:4vh 5vw;display:flex;flex-direction:column}.display-shell .display-brandbar{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:3vh}.display-shell .wordmark{font-size:clamp(34px,4vw,58px)}.display-shell .event-mark{font-size:clamp(18px,2vw,27px)}.display-board{flex:1;display:flex;flex-direction:column;padding:3.5vh 3.5vw;min-height:0;border-radius:12px}.display-board .board-heading{margin-bottom:3vh;align-items:center}.display-board .board-kicker{font-size:clamp(9px,1vw,14px);margin-bottom:1.5vh}.display-board h2{font-size:clamp(37px,5.2vw,82px);letter-spacing:-.04em}.display-board .checkers{width:63px;height:42px;background-size:21px 21px}.display-board .winner{padding:2.5vh 2vw;margin-bottom:1.8vh;gap:2vw;min-height:18vh}.display-board .winner-rank{width:8vw;font-size:clamp(60px,7.2vw,120px);letter-spacing:-.07em}.display-board .winner-name{font-size:clamp(30px,4vw,67px);letter-spacing:-.035em}.display-board .winner-label{font-size:clamp(9px,.85vw,13px)}.display-board .winner-star{width:3vw;height:3vw;min-width:25px;min-height:25px}.display-board .rank-list{gap:1.2vh 1vw;flex:1;grid-auto-rows:1fr}.display-board .rank-row{padding:1.5vh 1.5vw;gap:1.5vw;min-height:7vh}.display-board .rank-number{font-size:clamp(17px,1.6vw,28px);width:2.7vw;min-width:24px}.display-board .rank-name{font-size:clamp(20px,2vw,36px);letter-spacing:-.03em}.display-board .board-empty{flex:1;min-height:0}.display-board .board-empty h3{font-size:clamp(30px,4vw,65px)}.display-board .board-empty p{font-size:clamp(14px,1.4vw,22px);max-width:480px}.display-board .board-footer{margin-top:2vh;padding-top:1.5vh;font-size:clamp(8px,.8vw,12px)}.display-controls{position:fixed;right:20px;bottom:20px;display:flex;gap:8px;z-index:10;opacity:0;transition:opacity .2s}.display-controls:hover,.display-controls:focus-within,body.controls-visible .display-controls{opacity:1}.display-controls button{background:#071b14d9;color:white;border:1px solid #ffffff45;border-radius:6px;padding:11px 15px;font-size:12px}.display-tip{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#071b14ee;border:1px solid #ffffff26;border-radius:6px;padding:10px 16px;font-size:12px;color:#ceddc4;z-index:10;text-align:center;max-width:90%}.display-sync-warning{padding:10px 15px;background:#713e13;color:#fff0d5;font-size:12px;border-radius:6px;margin-bottom:10px}
+    @media(min-width:1800px){.display-board .rank-name{font-size:36px}}@media(max-width:1000px){.main-grid{grid-template-columns:300px minmax(0,1fr)}.admin-heading{align-items:flex-start;flex-direction:column}.board{padding:23px}.rank-list{grid-template-columns:1fr}.rank-row{padding:11px 13px}.rank-name{font-size:17px}.winner-star{display:none}.winner-rank{font-size:49px;width:48px}.display-board .rank-list{grid-template-columns:repeat(2,minmax(0,1fr))}.display-board .rank-row{padding:1.5vh 1.5vw}.display-board .rank-name{font-size:clamp(17px,2.3vw,25px)}}
+    @media(max-width:740px){.topbar{padding:20px 6vw}.status{font-size:9px;letter-spacing:1px}.wordmark{font-size:35px}.brand{gap:15px}.event-mark{font-size:17px}.admin-shell{padding:29px 6vw}.main-grid{grid-template-columns:1fr}.admin-heading h1{font-size:32px}.header-actions{width:100%}.header-actions .btn-primary{flex:1}.operator-header,.entry-form{padding-left:23px;padding-right:23px}.rank-list{grid-template-columns:repeat(2,minmax(0,1fr))}.board h2{font-size:34px}.winner-name{font-size:29px}.winner-rank{font-size:56px}.data-header{padding:20px}.data-actions .btn{font-size:11px}td,th{padding:12px 16px}.data-footer{align-items:flex-start;padding:15px 20px;flex-direction:column}.display-shell{padding:3vh 4vw}.display-shell .display-brandbar{margin-bottom:2vh}.display-shell .tag{display:none}.display-board{padding:3vh 4vw}.display-board .winner-rank{width:11vw;min-width:48px}.display-board .rank-list{grid-template-columns:1fr;gap:1vh}.display-board .rank-row{padding:1.2vh 3vw;gap:4vw;min-height:6vh}.display-board .rank-name{font-size:clamp(19px,4.5vw,27px)}.display-board .winner-name{font-size:clamp(26px,6vw,40px)}.display-board .winner{min-height:14vh}.display-board .board-heading{margin-bottom:2vh}.display-board .board-footer{letter-spacing:1px}.display-tip{font-size:10px;width:90%}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+    .display-board .winner-name.name-long{font-size:clamp(25px,2.8vw,48px)}.display-board .rank-name.name-long{font-size:clamp(16px,1.45vw,26px)}
+  </style>
+</head>
+<body>
+  <div id="admin-view">
+    <header class="topbar">
+      <div class="brand" aria-label="Kahf × IMX 2026"><div class="wordmark">kahf</div><div class="brand-divider"></div><div class="event-mark">IMX 2026<span>TOP SPENDER</span></div></div>
+      <div class="status">KONTROL BOOTH</div>
+    </header>
+    <main class="admin-shell">
+      <div class="admin-heading">
+        <div><div class="eyebrow">KAHF × INDONESIA MODIFICATION EXPO</div><h1>Siapa di posisi teratas?</h1><p>Catat belanjanya. Leaderboard langsung mengikuti.</p></div>
+        <div class="header-actions"><button class="btn btn-outline" id="help-button" type="button">Cara pakai</button><button class="btn btn-primary" id="open-display" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg>Buka layar leaderboard ↗</button></div>
+      </div>
+      <div id="storage-warning" class="storage-warning" role="alert" hidden></div>
+      <div class="main-grid">
+        <section class="operator-panel" aria-labelledby="form-title">
+          <div class="operator-header"><h2 id="form-title">Catat top spender</h2><p>Peserta dengan total belanja<br><strong>lebih dari Rp1.000.000.</strong></p></div>
+          <form class="entry-form" id="entry-form" novalidate>
+            <div id="edit-banner" class="edit-banner" hidden>Mode edit: nominal yang disimpan akan <strong>mengganti total sebelumnya.</strong></div>
+            <div class="field"><label for="spender-name">Nama di leaderboard</label><input id="spender-name" type="text" placeholder="Contoh: Ariq D." maxlength="48" autocomplete="off" required><small>Gunakan nama atau inisial yang disetujui peserta.</small></div>
+            <div class="field"><label for="spender-amount">Total belanja (Rp)</label><div class="amount-wrap"><span aria-hidden="true">Rp</span><input id="spender-amount" type="text" inputmode="numeric" placeholder="1.500.000" autocomplete="off" maxlength="19" required aria-describedby="amount-help"></div><small id="amount-help">Masukkan total akhir, bukan tambahan transaksi.</small></div>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <button class="btn btn-dark" id="save-button" type="submit">Simpan ke leaderboard <span aria-hidden="true">↗</span></button>
+            <button class="btn btn-soft cancel-edit" id="cancel-edit" type="button" hidden>Batal edit</button>
+          </form>
+          <div class="panel-foot"><strong>Nominal hanya untuk promotor.</strong>Layar leaderboard menampilkan peringkat dan nama saja.</div>
+        </section>
+        <section class="preview-section" aria-label="Pratinjau layar booth">
+          <div class="preview-caption"><strong>PRATINJAU LAYAR BOOTH</strong><span>Update otomatis</span></div>
+          <div class="board" id="preview-board"></div>
+        </section>
+      </div>
+      <section class="data-section" aria-labelledby="data-title">
+        <div class="data-header"><div><h2 id="data-title">Daftar peserta <span id="participant-count">· 0</span></h2><p>Data admin · nominal tidak muncul di layar booth.</p></div><div class="data-actions"><button class="btn btn-outline small-btn" id="backup-button" type="button">↓ Backup data</button><button class="btn btn-outline small-btn" id="restore-button" type="button">↑ Pulihkan backup</button></div></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Posisi</th><th scope="col">Nama peserta</th><th scope="col">Total belanja</th><th scope="col">Kelola</th></tr></thead><tbody id="participant-table"></tbody></table></div>
+        <div class="data-footer"><span>Jika nominal sama, peserta yang lebih dulu dicatat berada di atas.</span><button class="text-button" id="reset-button" type="button">Kosongkan leaderboard</button></div>
+      </section>
+      <p class="page-note">Offline · Data tersimpan di browser ini · Gunakan satu tab admin untuk input</p>
+    </main>
+  </div>
+  <main class="display-shell" id="display-view" hidden>
+    <div class="display-brandbar"><div class="brand" aria-label="Kahf × IMX 2026"><div class="wordmark">kahf</div><div class="brand-divider"></div><div class="event-mark">IMX 2026<span>TOP SPENDER</span></div></div><div class="tag">YOUR NEXT LEVEL STARTS HERE</div></div>
+    <div id="display-sync-warning" class="display-sync-warning" hidden>Layar belum terhubung. Buka layar ini melalui tombol di tab admin.</div>
+    <div class="board display-board" id="public-board" aria-label="Leaderboard Top Spender"></div>
+    <div class="display-controls"><button id="fullscreen-button" type="button">Layar penuh</button><button id="back-admin" type="button">Kembali ke admin</button></div>
+    <div class="display-tip" id="display-tip">Tekan F untuk layar penuh · Gerakkan mouse untuk kontrol</div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <input type="file" id="import-file" accept=".json,application/json" hidden>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-body"><h2 id="confirm-title"></h2><p id="confirm-text"></p></div><div class="dialog-actions"><button class="btn btn-soft" id="confirm-cancel" type="button">Batal</button><button class="btn btn-dark" id="confirm-ok" type="button">Lanjutkan</button></div></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-body"><div class="eyebrow" style="color:#567534">PANDUAN SINGKAT</div><h2 id="help-title">Siap tampil di booth.</h2><ol class="help-list"><li><strong>Buka file ini di Chrome atau Edge pada laptop.</strong> Halaman pertama adalah admin untuk promotor.</li><li><strong>Input nama dan total belanja lebih dari Rp1.000.000.</strong> Klik Simpan. Untuk mengubah total peserta yang sama, klik Edit pada daftar.</li><li><strong>Klik Buka layar leaderboard.</strong> Tab baru hanya menampilkan nama dan peringkat. Biarkan tab admin tetap terbuka.</li><li><strong>Hubungkan TV/monitor dengan mode Extend.</strong> Pindahkan tab leaderboard ke layar booth, lalu tekan <kbd>F</kbd> atau <kbd>F11</kbd> untuk layar penuh.</li><li><strong>Klik Backup data secara berkala.</strong> File JSON dapat dipulihkan lewat Pulihkan backup. Backup menyimpan nama serta nominal; simpan untuk kebutuhan admin.</li></ol><p class="help-note">Versi ini untuk satu laptop dan browser yang sama. Tab display mengikuti admin otomatis tanpa internet. HP/laptop lain belum tersambung. Gunakan satu tab admin agar input tidak saling menimpa.</p><p class="help-note">Nama yang sama tidak dijumlahkan otomatis. Saat nama sudah terdaftar, aplikasi meminta konfirmasi untuk mengganti total. Untuk dua orang dengan nama yang sama, gunakan pembeda, misalnya “Budi A.” dan “Budi S.”</p><p class="help-note">Peringkat pertama selalu terlihat. Jika daftar penuh, nama lainnya berganti halaman otomatis setiap 9 detik. Jika total sama, urutan mengikuti waktu pertama peserta dicatat.</p><p class="help-note">Gunakan file, folder, dan browser yang sama selama event. Memindahkan file, mode Incognito, atau menghapus data browser dapat memutus akses ke data tersimpan. Pulihkan lewat backup jika diperlukan.</p></div><div class="dialog-actions"><button class="btn btn-dark" id="close-help" type="button">Mengerti</button></div></dialog>
+  <script id="leaderboard-model">
+  'use strict';
+  const Leaderboard = (() => {
+    const MIN_AMOUNT = 1000000;
+    const MAX_AMOUNT = 999999999999;
+    const MAX_RECORDS = 5000;
+    const keyName = name => name.normalize('NFKC').replace(/\s+/g, ' ').trim().toLocaleLowerCase('id-ID');
+    function cleanName(name) {
+      if (typeof name !== 'string') throw new Error('Nama peserta harus berupa teks.');
+      const value = name.normalize('NFKC').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim();
+      if (!value || value.length > 48) throw new Error('Nama wajib diisi, maksimal 48 karakter.');
+      return value;
+    }
+    function checkAmount(amount) {
+      if (!Number.isSafeInteger(amount) || amount <= MIN_AMOUNT || amount > MAX_AMOUNT) throw new Error('Total belanja harus lebih dari Rp1.000.000 (rupiah bulat).');
+      return amount;
+    }
+    function parseAmount(text) {
+      const value = String(text).trim().replace(/^Rp\s*/i, '');
+      if (!/^(?:\d+|\d{1,3}(?:\.\d{3})+|\d{1,3}(?:,\d{3})+)$/.test(value)) throw new Error('Isi nominal dengan angka, misalnya 1500000 atau 1.500.000.');
+      return checkAmount(Number(value.replace(/[.,]/g, '')));
+    }
+    function validateState(raw) {
+      if (!raw || raw.schemaVersion !== 1 || !Array.isArray(raw.records) || raw.records.length > MAX_RECORDS) throw new Error('Format backup tidak sesuai dengan leaderboard IMX 2026.');
+      const ids = new Set(), names = new Set();
+      const records = raw.records.map(record => {
+        if (!record || typeof record.id !== 'string' || !record.id || record.id.length > 100 || !Number.isSafeInteger(record.createdAt) || record.createdAt <= 0) throw new Error('Ada data peserta yang tidak valid.');
+        const name = cleanName(record.name), amount = checkAmount(record.amount), nameKey = keyName(name);
+        if (ids.has(record.id) || names.has(nameKey)) throw new Error('Backup berisi nama atau ID peserta yang duplikat.');
+        ids.add(record.id); names.add(nameKey);
+        return { id: record.id, name, amount, createdAt: record.createdAt };
+      });
+      return { schemaVersion: 1, records, updatedAt: Number.isSafeInteger(raw.updatedAt) && raw.updatedAt >= 0 ? raw.updatedAt : 0 };
+    }
+    function sortRecords(records) { return records.slice().sort((a,b) => b.amount - a.amount || a.createdAt - b.createdAt || a.id.localeCompare(b.id)); }
+    function publicData(state) { return { names: sortRecords(state.records).map(record => record.name), updatedAt: state.updatedAt }; }
+    function saveRecord(state, input, now, id) {
+      const name = cleanName(input.name), amount = checkAmount(input.amount);
+      const records = state.records.map(record => ({ ...record }));
+      const conflict = records.find(record => keyName(record.name) === keyName(name) && record.id !== input.id);
+      if (conflict) throw new Error('Nama sudah terdaftar. Gunakan Edit atau tambahkan pembeda pada nama.');
+      const index = records.findIndex(record => record.id === input.id);
+      if (input.id && index < 0) throw new Error('Peserta sudah dihapus. Batalkan edit dan input kembali.');
+      if (index >= 0) records[index] = { ...records[index], name, amount };
+      else {
+        if (records.length >= MAX_RECORDS) throw new Error('Jumlah peserta sudah mencapai batas aplikasi.');
+        records.push({ id, name, amount, createdAt: now });
+      }
+      return { schemaVersion: 1, records, updatedAt: now };
+    }
+    return { MIN_AMOUNT, MAX_AMOUNT, cleanName, checkAmount, parseAmount, keyName, validateState, sortRecords, publicData, saveRecord };
+  })();
+  </script>
+  <script id="leaderboard-app">
+  (() => {
+    'use strict';
+    const STORAGE_KEY = 'kahf-imx-2026-top-spender-v1';
+    const CHANNEL_NAME = 'kahf-imx-2026-display-v1';
+    const PROTOCOL = 'kahf-imx-display-v1';
+    const PAGE_DURATION = 9000;
+    const pageSize = () => window.innerWidth < 740 ? 4 : 6;
+    const $ = id => document.getElementById(id);
+    const numberFormat = new Intl.NumberFormat('id-ID');
+    const currency = amount => 'Rp' + numberFormat.format(amount);
+    const isDisplay = location.hash === '#display';
+    const ownOrigin = location.origin === 'null' ? '*' : location.origin;
+    let state = { schemaVersion: 1, records: [], updatedAt: 0 };
+    let publicState = { names: [], updatedAt: 0 };
+    let editingId = null, displayWindow = null, channel = null, storageUsable = true, corruptStorage = false;
+    let page = 0, toastTimer = 0, controlTimer = 0, confirmation = null, latestStorage = null, lastSync = 0;
+    function node(tag, className, text) { const el = document.createElement(tag); if (className) el.className = className; if (text !== undefined) el.textContent = text; return el; }
+    function warning(message) { $('storage-warning').textContent = message; $('storage-warning').hidden = !message; }
+    function toast(message) { $('toast').textContent = message; $('toast').hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3800); }
+    function formError(message) { $('form-error').textContent = message; $('form-error').hidden = !message; }
+    function readState() {
+      try {
+        const value = localStorage.getItem(STORAGE_KEY);
+        latestStorage = value;
+        if (value) state = Leaderboard.validateState(JSON.parse(value));
+      } catch (error) {
+        if (error.name === 'SecurityError') {
+          storageUsable = false;
+          warning('Penyimpanan browser tidak tersedia. Input tetap berjalan selama tab admin terbuka. Klik Backup data sebelum menutup halaman.');
+        } else {
+          corruptStorage = true;
+          $('save-button').disabled = true;
+          warning('Data tersimpan tidak dapat dibaca. Pulihkan backup atau kosongkan leaderboard sebelum input baru.');
+        }
+      }
+      publicState = Leaderboard.publicData(state);
+    }
+    function persist(next) {
+      if (storageUsable) {
+        try { latestStorage = JSON.stringify(next); localStorage.setItem(STORAGE_KEY, latestStorage); }
+        catch { storageUsable = false; warning('Data belum tersimpan permanen karena penyimpanan browser tidak tersedia/penuh. Klik Backup data sebelum menutup tab admin.'); }
+      }
+      state = next;
+      publicState = Leaderboard.publicData(state);
+      page = 0;
+      renderAdmin(); renderBoards(); broadcast();
+    }
+    function safePublic(payload) {
+      if (!payload || !Array.isArray(payload.names) || payload.names.length > 5000 || !Number.isSafeInteger(payload.updatedAt) || payload.updatedAt < 0) return null;
+      try { return { names: payload.names.map(Leaderboard.cleanName), updatedAt: payload.updatedAt }; } catch { return null; }
+    }
+    function acceptPublic(payload) {
+      const clean = safePublic(payload);
+      if (!clean) return;
+      lastSync = Date.now();
+      $('display-sync-warning').hidden = true;
+      if (JSON.stringify(clean) !== JSON.stringify(publicState)) { publicState = clean; page = 0; renderBoards(); }
+    }
+    function sendToDisplay() {
+      if (displayWindow && !displayWindow.closed) {
+        try { displayWindow.postMessage({ protocol: PROTOCOL, type: 'state', payload: Leaderboard.publicData(state) }, ownOrigin); } catch { /* BroadcastChannel is the alternate path. */ }
+      }
+    }
+    function broadcast() {
+      const payload = Leaderboard.publicData(state);
+      if (channel) { try { channel.postMessage({ type: 'state', payload }); } catch { /* The direct window connection remains active. */ } }
+      sendToDisplay();
+    }
+    function renderBoard(id) {
+      const target = $(id);
+      target.replaceChildren();
+      const heading = node('div', 'board-heading'), title = node('div');
+      title.append(node('p', 'board-kicker', 'KAHF × IMX 2026'), node('h2', '', 'TOP SPENDER'));
+      heading.append(title, node('div', 'checkers'));
+      heading.lastChild.setAttribute('aria-hidden', 'true');
+      target.append(heading);
+      const names = publicState.names;
+      if (!names.length) {
+        const empty = node('div', 'board-empty');
+        const symbol = node('div', '', '↗'); symbol.style.cssText = 'font-size:54px;color:var(--lime);margin-bottom:15px'; symbol.setAttribute('aria-hidden', 'true');
+        empty.append(symbol, node('h3', '', 'Posisi teratas menantimu.'), node('p', '', 'Jadilah top spender Kahf di IMX 2026.'));
+        target.append(empty);
+      } else {
+        const winner = node('div', 'winner');
+        const winnerInfo = node('div');
+        winnerInfo.append(node('p', 'winner-label', 'POLE POSITION'), node('div', 'winner-name' + (names[0].length > 28 ? ' name-long' : ''), names[0]));
+        const star = node('div', 'winner-star', '✦'); star.style.fontSize = '30px'; star.setAttribute('aria-hidden', 'true');
+        winner.append(node('div', 'winner-rank', '01'), winnerInfo, star);
+        const list = node('ol', 'rank-list');
+        const start = 1 + page * pageSize();
+        list.setAttribute('start', String(start + 1));
+        names.slice(start, start + pageSize()).forEach((name, i) => {
+          const row = node('li', 'rank-row');
+          row.append(node('span', 'rank-number', String(start + i + 1).padStart(2, '0')), node('span', 'rank-name' + (name.length > 28 ? ' name-long' : ''), name));
+          list.append(row);
+        });
+        target.append(winner, list);
+      }
+      const footer = node('div', 'board-footer');
+      const pages = Math.max(1, Math.ceil((names.length - 1) / pageSize()));
+      footer.append(node('span', '', 'GROOMED TO GO FURTHER.'), node('span', '', pages > 1 ? `LEADERBOARD · ${page + 1}/${pages}` : 'KAHF × IMX 2026'));
+      target.append(footer);
+    }
+    function renderBoards() { renderBoard(isDisplay ? 'public-board' : 'preview-board'); }
+    function renderAdmin() {
+      if (isDisplay) return;
+      $('participant-count').textContent = '· ' + state.records.length;
+      const table = $('participant-table'); table.replaceChildren();
+      const records = Leaderboard.sortRecords(state.records);
+      if (!records.length) { const row = node('tr'); const cell = node('td', 'table-empty', 'Belum ada peserta. Input nama dan nominal untuk mulai.'); cell.colSpan = 4; row.append(cell); table.append(row); }
+      records.forEach((record, index) => {
+        const row = node('tr');
+        row.append(node('td', 'table-rank', String(index + 1).padStart(2, '0')), node('td', 'table-name', record.name), node('td', 'table-amount', currency(record.amount)));
+        const controls = node('td'), actions = node('div', 'row-actions');
+        ['edit','delete'].forEach(action => { const button = node('button', '', action === 'edit' ? 'Edit' : 'Hapus'); button.type = 'button'; button.dataset.action = action; button.dataset.id = record.id; button.setAttribute('aria-label', `${action === 'edit' ? 'Edit' : 'Hapus'} ${record.name}`); actions.append(button); });
+        controls.append(actions); row.append(controls); table.append(row);
+      });
+    }
+    function clearForm() {
+      editingId = null; $('entry-form').reset(); $('edit-banner').hidden = true; $('cancel-edit').hidden = true; $('form-title').textContent = 'Catat top spender'; $('save-button').textContent = 'Simpan ke leaderboard ↗'; formError('');
+    }
+    function ask(title, message, label = 'Lanjutkan', danger = false) {
+      if (confirmation) return Promise.resolve(false);
+      $('confirm-title').textContent = title; $('confirm-text').textContent = message; $('confirm-ok').textContent = label; $('confirm-ok').className = danger ? 'btn btn-danger' : 'btn btn-dark';
+      return new Promise(resolve => { confirmation = resolve; $('confirm-dialog').showModal(); $('confirm-cancel').focus(); });
+    }
+    function finishAsk(answer) { const resolve = confirmation; confirmation = null; $('confirm-dialog').close(); if (resolve) resolve(answer); }
+    function downloadBackup() {
+      const exported = { app: 'Kahf × IMX 2026 Top Spender', exportedAt: new Date().toISOString(), ...state };
+      const blob = new Blob([JSON.stringify(exported, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob), link = node('a');
+      link.href = url; link.download = 'Kahf-IMX-2026-backup-' + new Date().toISOString().replace(/[:.]/g, '-') + '.json';
+      document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }
+    function newId() { return typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : 'spender-' + Date.now() + '-' + Math.random().toString(36).slice(2); }
+    async function submit(event) {
+      event.preventDefault(); if (corruptStorage) return;
+      try {
+        const name = Leaderboard.cleanName($('spender-name').value), amount = Leaderboard.parseAmount($('spender-amount').value);
+        let targetId = editingId;
+        const duplicate = state.records.find(record => Leaderboard.keyName(record.name) === Leaderboard.keyName(name) && record.id !== targetId);
+        if (duplicate) {
+          if (targetId) throw new Error('Nama ini digunakan peserta lain. Tambahkan pembeda pada nama.');
+          const approved = await ask('Nama sudah terdaftar', `${duplicate.name} sudah tercatat dengan total ${currency(duplicate.amount)}. Ganti total menjadi ${currency(amount)}?\n\nTotal lama akan diganti, bukan dijumlahkan. Jika orangnya berbeda, batalkan dan gunakan nama dengan pembeda.`, 'Ganti total');
+          if (!approved) return;
+          targetId = duplicate.id;
+        }
+        const next = Leaderboard.saveRecord(state, { id: targetId, name, amount }, Date.now(), newId());
+        persist(next); clearForm(); $('spender-name').focus(); toast(targetId ? 'Total diperbarui. Peringkat sudah mengikuti.' : 'Peserta tersimpan. Leaderboard diperbarui.');
+      } catch (error) { formError(error.message); }
+    }
+    function editRecord(record) {
+      editingId = record.id; $('spender-name').value = record.name; $('spender-amount').value = numberFormat.format(record.amount); $('edit-banner').hidden = false; $('cancel-edit').hidden = false; $('form-title').textContent = 'Edit peserta'; $('save-button').textContent = 'Simpan perubahan ↗'; formError(''); $('entry-form').scrollIntoView({ behavior: 'smooth', block: 'center' }); $('spender-amount').focus(); $('spender-amount').select();
+    }
+    async function fullscreen() {
+      try { if (document.fullscreenElement) await document.exitFullscreen(); else await document.documentElement.requestFullscreen(); }
+      catch { $('display-tip').textContent = 'Gunakan F11 di Chrome / Edge untuk layar penuh.'; $('display-tip').hidden = false; }
+    }
+    function revealControls() { document.body.classList.add('controls-visible'); clearTimeout(controlTimer); controlTimer = setTimeout(() => { document.body.classList.remove('controls-visible'); }, 2400); }
+    function connectedMessage(event) {
+      if (location.origin !== 'null' && event.origin !== location.origin) return;
+      const message = event.data;
+      if (!message || message.protocol !== PROTOCOL) return;
+      if (isDisplay) {
+        if (event.source !== window.opener || message.type !== 'state') return;
+        acceptPublic(message.payload);
+      } else if (event.source === displayWindow && message.type === 'ready') sendToDisplay();
+    }
+    window.addEventListener('message', connectedMessage);
+    try {
+      channel = new BroadcastChannel(CHANNEL_NAME);
+      channel.onmessage = event => {
+        if (isDisplay && event.data && event.data.type === 'state') acceptPublic(event.data.payload);
+        else if (!isDisplay && event.data && event.data.type === 'ready') broadcast();
+      };
+    } catch { /* Opener/postMessage supports local files without BroadcastChannel. */ }
+    if (isDisplay) {
+      document.body.classList.add('display-mode'); $('admin-view').hidden = true; $('display-view').hidden = false;
+      document.title = 'LIVE — Kahf × IMX 2026 Top Spender';
+      // Load only the public projection. Never put monetary values in the display DOM.
+      try { const value = localStorage.getItem(STORAGE_KEY); if (value) publicState = Leaderboard.publicData(Leaderboard.validateState(JSON.parse(value))); } catch { /* Ask the admin tab for the current names. */ }
+      renderBoards();
+      function requestState() {
+        try { if (window.opener && !window.opener.closed) window.opener.postMessage({ protocol: PROTOCOL, type: 'ready' }, ownOrigin); } catch { /* Channel is the alternate path. */ }
+        if (channel) { try { channel.postMessage({ type: 'ready' }); } catch { /* Direct connection remains active. */ } }
+      }
+      requestState(); setInterval(requestState, 1500);
+      setTimeout(() => { if (!lastSync) $('display-sync-warning').hidden = false; }, 4500);
+      setInterval(() => { if (lastSync && Date.now() - lastSync > 10000) { $('display-sync-warning').textContent = 'Update terhenti. Buka kembali layar ini dari tab admin.'; $('display-sync-warning').hidden = false; } }, 3000);
+      $('fullscreen-button').addEventListener('click', fullscreen);
+      $('back-admin').addEventListener('click', () => { if (window.opener && !window.opener.closed) { try { window.opener.focus(); window.close(); return; } catch { /* Return to the local admin view. */ } } location.hash = ''; location.reload(); });
+      document.addEventListener('keydown', event => { if (event.key.toLowerCase() === 'f' && !event.ctrlKey && !event.metaKey && !event.altKey) { event.preventDefault(); fullscreen(); } });
+      document.addEventListener('mousemove', revealControls); document.addEventListener('touchstart', revealControls, { passive: true });
+      setTimeout(() => { $('display-tip').hidden = true; }, 7000);
+    } else {
+      readState(); renderAdmin(); renderBoards();
+      $('entry-form').addEventListener('submit', submit);
+      $('cancel-edit').addEventListener('click', () => { clearForm(); $('spender-name').focus(); });
+      $('spender-amount').addEventListener('blur', () => { try { const amount = Leaderboard.parseAmount($('spender-amount').value); $('spender-amount').value = numberFormat.format(amount); } catch { /* Validation is shown on submission. */ } });
+      $('open-display').addEventListener('click', () => {
+        if (displayWindow && !displayWindow.closed) { displayWindow.focus(); sendToDisplay(); return; }
+        const url = new URL(location.href); url.hash = 'display'; displayWindow = window.open(url.href, 'kahf-imx-2026-live-display');
+        if (!displayWindow) toast('Izinkan pop-up pada browser, lalu klik Buka layar leaderboard lagi.');
+        else { sendToDisplay(); toast('Layar leaderboard dibuka. Biarkan tab admin tetap terbuka.'); }
+      });
+      $('participant-table').addEventListener('click', async event => {
+        const button = event.target.closest('button[data-action]'); if (!button) return;
+        const record = state.records.find(item => item.id === button.dataset.id); if (!record) return;
+        if (button.dataset.action === 'edit') editRecord(record);
+        else if (await ask('Hapus peserta?', `${record.name} akan dihapus dari leaderboard.`, 'Hapus peserta', true)) { persist({ ...state, records: state.records.filter(item => item.id !== record.id), updatedAt: Date.now() }); if (editingId === record.id) clearForm(); toast('Peserta dihapus.'); }
+      });
+      $('backup-button').addEventListener('click', () => { if (corruptStorage) { toast('Data tersimpan rusak; pulihkan backup yang sudah ada terlebih dahulu.'); return; } downloadBackup(); toast('Backup diunduh. File berisi nama dan nominal untuk admin.'); });
+      $('restore-button').addEventListener('click', () => { $('import-file').value = ''; $('import-file').click(); });
+      $('import-file').addEventListener('change', async event => {
+        const file = event.target.files[0]; if (!file) return;
+        try {
+          if (file.size > 5 * 1024 * 1024) throw new Error('Ukuran backup maksimal 5 MB.');
+          const imported = Leaderboard.validateState(JSON.parse(await file.text()));
+          if (!(await ask('Pulihkan backup?', `Backup berisi ${imported.records.length} peserta. Data aktif akan diganti dengan isi backup ini.\n\nJika ada data aktif, backup data itu akan diunduh sebelum diganti.`, 'Pulihkan'))) return;
+          if (state.records.length && !corruptStorage) downloadBackup();
+          corruptStorage = false; $('save-button').disabled = false; if (storageUsable) warning('');
+          persist({ ...imported, updatedAt: Date.now() }); clearForm(); toast('Backup dipulihkan. Leaderboard diperbarui.');
+        } catch (error) { toast('Gagal memulihkan: ' + (error instanceof SyntaxError ? 'file JSON tidak valid.' : error.message)); }
+      });
+      $('reset-button').addEventListener('click', async () => {
+        if (!(await ask('Kosongkan leaderboard?', 'Semua peserta akan dihapus dari daftar aktif. Jika ada data aktif, backup akan diunduh sebelum daftar dikosongkan.\n\nGunakan saat memulai sesi atau hari yang baru.', 'Kosongkan', true))) return;
+        if (state.records.length && !corruptStorage) downloadBackup();
+        corruptStorage = false; $('save-button').disabled = false; if (storageUsable) warning('');
+        persist({ schemaVersion: 1, records: [], updatedAt: Date.now() }); clearForm(); toast('Leaderboard dikosongkan. Siap untuk sesi baru.');
+      });
+      $('help-button').addEventListener('click', () => $('help-dialog').showModal()); $('close-help').addEventListener('click', () => $('help-dialog').close());
+      // Detect changes from another admin tab before the next edit, when file storage is shared.
+      window.addEventListener('storage', event => {
+        if (event.key !== STORAGE_KEY || event.newValue === latestStorage || corruptStorage) return;
+        try {
+          state = event.newValue ? Leaderboard.validateState(JSON.parse(event.newValue)) : { schemaVersion: 1, records: [], updatedAt: Date.now() };
+          latestStorage = event.newValue; publicState = Leaderboard.publicData(state); page = 0; clearForm(); renderAdmin(); renderBoards(); broadcast(); toast('Data berubah dari tab lain. Periksa total sebelum input berikutnya.');
+        } catch { warning('Data diubah oleh tab lain dan tidak dapat dibaca. Pulihkan backup sebelum input.'); corruptStorage = true; $('save-button').disabled = true; }
+      });
+      setInterval(sendToDisplay, 2000);
+    }
+    $('confirm-cancel').addEventListener('click', () => finishAsk(false)); $('confirm-ok').addEventListener('click', () => finishAsk(true)); $('confirm-dialog').addEventListener('cancel', event => { event.preventDefault(); finishAsk(false); });
+    setInterval(() => {
+      const pages = Math.max(1, Math.ceil((publicState.names.length - 1) / pageSize()));
+      if (pages > 1) { page = (page + 1) % pages; renderBoards(); }
+    }, PAGE_DURATION);
+    window.addEventListener('resize', () => { page = 0; renderBoards(); });
+    window.addEventListener('hashchange', () => location.reload());
+  })();
+  </script>
+</body>
+</html>
